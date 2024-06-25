@@ -408,13 +408,19 @@ def calculate():
     
     def thread_target():
         start_time = time.time()
-        generate(rawdata,mappingtable,devicelist,testmap,start,stop,passband_start_,passband_stop_,search_method,ilfreq1,ilfreq2,rejfreq1,rejfreq2,rejfreq3,bwil1,bwil2,bwil3,illbe,ilrbe,roff1,roff2)
-        calculate_button.config(state=tk.ACTIVE)
+        try:
+            generate(rawdata,mappingtable,devicelist,testmap,start,stop,passband_start_,passband_stop_,search_method,ilfreq1,ilfreq2,rejfreq1,rejfreq2,rejfreq3,bwil1,bwil2,bwil3,illbe,ilrbe,roff1,roff2)
+        except Exception:
+            raise Exception('Please check file directory inputs')
+        finally:
+            calculate_button.config(state=tk.ACTIVE)
         end_time=time.time()
         timetaken = end_time-start_time
         print(f'time taken: {int(timetaken//60)} minutes {int(timetaken%60)} seconds')
     thread = threading.Thread(target=thread_target)
     thread.start()
+
+
 
     
 def extract_parse_info(filepath):

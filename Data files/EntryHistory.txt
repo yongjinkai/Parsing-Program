@@ -1,0 +1,5 @@
+rawdata:C:/Users/60061632/Desktop/Jinkai edits/Parsing programs/Sample files/7. FS4101N1_AEP319_TRIM5_41FR_0328 (filter) - 1 wafer only
+devicelist:C:/Users/60061632/Desktop/Jinkai edits/Parsing programs/Sample files/Device List/N41 NTO/Filter list.xlsx
+mappingtable:C:/Users/60061632/Desktop/Jinkai edits/Parsing programs/Sample files/Mapping Table/N41 NTO/N41_41FR_Mapping Table (5 shot).xlsx
+testmap:41FR
+dropdown_selection:Wifi_20231121
